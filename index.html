@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Responsivo</title>
+    
+    <!-- Ícone menu hambúrguer - Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <link rel="stylesheet" href="estilos/media-query.css">
+
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu Site</h1>
+        <span id="menu-burguer" class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+        </span>
+        <menu id="lista">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+                <li><a href="#">Opção 6</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries com menu responsivo/hambúrguer</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quia fugit vel quas. Quidem omnis molestiae quas adipisci ipsa. Vitae quis a tempora quisquam ad. Atque officia voluptate aperiam laborum.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime eum culpa veritatis obcaecati nulla ipsam, harum, praesentium autem hic dolorum voluptatibus unde nihil. Esse voluptatem sed praesentium laudantium nam excepturi?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nobis sit, reiciendis cupiditate minima assumenda odio beatae cum fuga! Enim, debitis aut architecto voluptates mollitia officia sed asperiores ut temporibus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero tenetur repudiandae atque rem cum modi velit tempore possimus excepturi dolorum iure recusandae, iusto amet minus saepe! Ad, iure impedit.</p>
+        </article>
+    </main>
+
+    <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 769) {
+                lista.style.display = 'block'
+            } else {
+                lista.style.display = 'none'
+            }
+        }
+
+
+        function clickMenu() {
+            if (lista.style.display == 'block') {
+                lista.style.display = 'none'
+            } else {
+                lista.style.display = 'block'
+            }
+        }
+    </script>
+
+</body>
+</html>
